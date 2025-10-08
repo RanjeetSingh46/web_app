@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Military Navy Blue */
+    --primary: 215 45% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Gold Accent */
+    --secondary: 45 90% 55%;
+    --secondary-foreground: 215 45% 15%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 15% 50%;
+
+    /* Lighter Navy for accents */
+    --accent: 215 40% 97%;
+    --accent-foreground: 215 45% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 90%;
+    --input: 215 20% 88%;
+    --ring: 215 45% 25%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --navy-deep: 215 50% 20%;
+    --navy-medium: 215 45% 35%;
+    --navy-light: 215 40% 50%;
+    --gold: 45 90% 55%;
+    --gold-dark: 40 85% 48%;
+    --cream: 45 50% 95%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 50% 20%) 0%, hsl(215 45% 35%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 90% 55%) 0%, hsl(40 85% 48%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 40% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-elevated: 0 2px 8px hsl(215 50% 20% / 0.08);
+    --shadow-gold: 0 2px 12px hsl(45 90% 55% / 0.2);
+    --shadow-card: 0 1px 3px hsl(215 50% 20% / 0.06);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 50% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 45% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 45% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 45 90% 55%;
+    --primary-foreground: 215 50% 8%;
+
+    --secondary: 215 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 40% 15%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 215 40% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 40% 20%;
+    --input: 215 40% 20%;
+    --ring: 45 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    @apply font-poppins text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  h2 {
+    @apply font-poppins text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+  }
+  
+  h3 {
+    @apply font-poppins text-xl md:text-2xl font-bold leading-tight;
+  }
+  
+  h4, h5, h6 {
+    @apply font-poppins text-lg md:text-xl font-semibold leading-tight;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
